@@ -6,7 +6,44 @@ namespace LeetCode.Problems
 {
     class UniqueSubstrings
     {
-      
+        public int FindSubstringInWraproundString(string p)
+        {
+            if (String.IsNullOrEmpty(p))
+            {
+                return 0;
+            }
+
+            var count = new int[26];
+            var result = 0;
+            var maxSize = 1;
+            count[p[0] - 'a'] = 1;
+
+            for (int i = 1; i < p.Length; i++)
+            {
+                var curChar = p[i];
+                var prevChar = p[i - 1];
+                var curVal = curChar + 0;
+                var prevVal = prevChar + 1;
+
+                if (curVal == prevVal || prevChar == 'z' && curChar == 'a')
+                {
+                    maxSize++;
+                }
+                else
+                {
+                    maxSize = 1;
+                }
+
+                count[curChar - 'a'] = Math.Max(count[curChar - 'a'], maxSize);
+            }
+
+            foreach (var item in count)
+            {
+                result += item;
+            }
+
+            return result;
+        }
     }
 }
 
