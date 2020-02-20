@@ -7,8 +7,8 @@ namespace LeetCode
     {
         static void Main(string[] args)
         {
-            var uniqueSubstrings = new UniqueSubstrings();
-            uniqueSubstrings.FindSubstringInWraproundString("zab");
+            var subDomainsCount = new SubdomainVisitCount();
+            subDomainsCount.SubdomainVisits(new string[] { "900 google.mail.com", "50 yahoo.com", "1 intel.mail.com", "5 wiki.org" });
                 
         }
     }
