@@ -7,8 +7,14 @@ namespace LeetCode
     {
         static void Main(string[] args)
         {
-            var longestChar = new LongestRepeatedChar();
-            Console.WriteLine( longestChar.MaxRepOpt1("baaabaaaaaaabaab"));
+            var minParenthesis = new MinAddParenthesis();
+
+           var a = minParenthesis.MinAddToMakeValid("())");
+            var b = minParenthesis.MinAddToMakeValid("(((");
+            var c = minParenthesis.MinAddToMakeValid("()");
+            var d = minParenthesis.MinAddToMakeValid("()))((");
+
+            Console.WriteLine($"{a} {b} {c} {d}");
         }
     }
 }

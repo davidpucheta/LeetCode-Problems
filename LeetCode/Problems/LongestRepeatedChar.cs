@@ -15,6 +15,8 @@ namespace LeetCode.Problems
 
             var dic = new Dictionary<char, int>();
             var toReturn = 0;
+            var currectChar = ' ';
+            var count = 0;
 
             foreach (var item in text)
             {
@@ -23,32 +25,22 @@ namespace LeetCode.Problems
 
             for (int i = 0; i < text.Length; i++)
             {
-                var currectChar = text[i];
-                var swapChar = text[i];
+                var c = text[i];
 
-                for (int j = 0; j < text.Length; j++)
+
+                if (currectChar == c)
                 {
-                    swapChar = text[j];
-                    var newText = new StringBuilder(text);
-                    newText[i] = swapChar;
-                    newText[j] = currectChar;
-                    var count = 0; 
-
-                    for (int k = 0; k < newText.Length; k++)
-                    {
-                         
-                        if (newText[k] == currectChar)
-                        {
-                            count += 1;
-                            dic[currectChar] = count > dic[currectChar] ? count : dic[currectChar];   
-                        } 
-                        else
-                        {
-                            count = 0;
-                        }
-                    }
+                    count += 1;
+                } 
+                else
+                {
+                    currectChar = c;
+                    count = 1;
                 }
+
+                dic[c] = count > dic[c] ? count : dic[c];
             }
+           
 
             foreach (var item in dic)
             {
