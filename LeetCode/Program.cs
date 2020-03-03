@@ -7,11 +7,13 @@ namespace LeetCode
     {
         static void Main(string[] args)
         {
+            var dnaSequences = new RepeatedDNASequences();
+            var a = dnaSequences.FindRepeatedDnaSequences(s: "AAAAACCCCCAAAAACCCCCCAAAAAGGGTTT");
 
-            var minTiles = new TilesInRectangle();
-            var a = minTiles.TilingRectangle(1, 2);
-
-            Console.WriteLine($"{a}");
+            foreach (var item in a)
+            {
+                Console.WriteLine(item);
+            }
         }
     }
 }
