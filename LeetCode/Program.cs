@@ -7,13 +7,16 @@ namespace LeetCode
     {
         static void Main(string[] args)
         {
-            var dnaSequences = new RepeatedDNASequences();
-            var a = dnaSequences.FindRepeatedDnaSequences(s: "AAAAACCCCCAAAAACCCCCCAAAAAGGGTTT");
+            var treeNode = new TreeNode(3);
+            treeNode.left = new TreeNode(9);
+            treeNode.right = new TreeNode(20);
 
-            foreach (var item in a)
-            {
-                Console.WriteLine(item);
-            }
+           
+
+
+
+            var levelOrder = new BinaryTreeLevelOrder();
+            levelOrder.LevelOrder(treeNode);
         }
     }
 }
