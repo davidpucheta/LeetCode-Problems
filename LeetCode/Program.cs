@@ -7,16 +7,12 @@ namespace LeetCode
     {
         static void Main(string[] args)
         {
-            var treeNode = new TreeNode(3);
-            treeNode.left = new TreeNode(9);
-            treeNode.right = new TreeNode(20);
+            var cNames = new CtorNames();
+            var cName = "abbzccc";
+            var mName = "babzzcz";
+            var x = cNames.constructorNames(cName, mName);
 
-           
-
-
-
-            var levelOrder = new BinaryTreeLevelOrder();
-            levelOrder.LevelOrder(treeNode);
+            Console.WriteLine($"Name validity: {x}");
         }
     }
 }
