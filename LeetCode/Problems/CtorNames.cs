@@ -7,7 +7,7 @@ namespace LeetCode.Problems
 {
     class CtorNames
     {
-        public bool constructorNames(string className, string methodName)
+        public bool ConstructorNames(string className, string methodName)
         {
             var toReturn = false;
 
