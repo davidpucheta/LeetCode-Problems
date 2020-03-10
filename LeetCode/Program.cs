@@ -7,21 +7,13 @@ namespace LeetCode
     {
         static void Main(string[] args)
         {
-            var strFromBinTree = new StringFromBinTree();
-            
-            var root = new TreeNode(1);
-            var rL = new TreeNode(2);
-            var rR = new TreeNode(3);
+        
+            var splitArr = new SplitArrayLargestSum();
+            var nums = new int [] {2,3,1,2,4,3};
 
-            root.left = rL;
-            root.right = rR;
-
-            rL.left = null;
-            rL.right = new TreeNode(4);
-
-            var x = strFromBinTree.Tree2Str(root);
+            var x = splitArr.SplitArray(nums, 5);
  
-            Console.WriteLine($"Name validity: {x}");
+            Console.WriteLine($"m: {x}");
         }
     }
 }
