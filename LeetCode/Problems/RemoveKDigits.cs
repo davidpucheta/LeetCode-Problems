@@ -52,7 +52,6 @@ namespace LeetCode.Problems
             {
                 toReturn = toReturn.Substring(1);
             }
-
             return toReturn;
         }
     }
