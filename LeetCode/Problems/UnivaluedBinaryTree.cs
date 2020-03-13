@@ -7,13 +7,11 @@ namespace LeetCode.Problems
     {
         public bool IsUnivalTree(TreeNode root)
         {
-            
-            
             if (root == null)
             {
                 return false;
             }
-            
+
             var toReturn = false;
             var value = root.val;
             var nodeQueue = new Queue<TreeNode>();
@@ -22,24 +20,25 @@ namespace LeetCode.Problems
             while (nodeQueue.Count > 0)
             {
                 var tempNode = nodeQueue.Dequeue();
-                
+
                 if (tempNode.val != value)
                 {
                     return false;
                 }
 
                 toReturn = true;
-                
+
                 if (tempNode.left != null)
                 {
-                    nodeQueue.Enqueue(tempNode.left);                     
+                    nodeQueue.Enqueue(tempNode.left);
                 }
+
                 if (tempNode.right != null)
                 {
-                    nodeQueue.Enqueue(tempNode.right);                     
+                    nodeQueue.Enqueue(tempNode.right);
                 }
             }
-            
+
             return toReturn;
         }
     }
