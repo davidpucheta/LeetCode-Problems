@@ -7,10 +7,11 @@ namespace LeetCode
     {
         static void Main(string[] args)
         {
-            var removeDigits = new RemoveKDigits();
-            var x = removeDigits.RemoveKdigits("123456789", 8);
+            var longestAS = new LongestArithmeticSequence();
+            var arr = new int[] { 83, 20, 17, 43, 52, 78, 68, 45};
+            var x = longestAS.LongestArithSeqLength(arr);
  
-            Console.WriteLine($"x: {x}");
+            Console.WriteLine($" Answer: {x}");
         }
     }
 }
