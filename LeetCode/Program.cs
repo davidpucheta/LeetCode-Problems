@@ -1,4 +1,5 @@
 ﻿using LeetCode.Problems;
+using LeetCode.ThirtyDaysOfCode;
 using System;
 
 namespace LeetCode
@@ -7,10 +8,8 @@ namespace LeetCode
     {
         static void Main(string[] args)
         {
-            var longestAS = new LongestArithmeticSequence();
-            var arr = new int[] {20,1,15,3,10,5,8,9,4,7,2};
-            var x = longestAS.LongestArithSeqLength(arr);
- 
+            var happy = new HappyNumber();
+            var x = happy.IsHappy(2);
             Console.WriteLine($" Answer: {x}");
         }
     }
