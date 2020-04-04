@@ -8,8 +8,8 @@ namespace LeetCode
     {
         static void Main(string[] args)
         {
-            var happy = new HappyNumber();
-            var x = happy.IsHappy(2);
+            var maxSubArray = new MaximunSubArray();
+            var x = maxSubArray.MaxSubArray(new int[]{-2,-1});
             Console.WriteLine($" Answer: {x}");
         }
     }
