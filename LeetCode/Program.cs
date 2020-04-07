@@ -8,8 +8,8 @@ namespace LeetCode
     {
         static void Main(string[] args)
         {
-            var maxSubArray = new MaximunSubArray();
-            var x = maxSubArray.MaxSubArray(new int[]{-2,-1});
+            var elCount = new CountingElements();
+            var x = elCount.CountElements(new int[]{1,2,3});
             Console.WriteLine($" Answer: {x}");
         }
     }
