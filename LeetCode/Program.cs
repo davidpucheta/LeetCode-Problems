@@ -8,8 +8,12 @@ namespace LeetCode
     {
         static void Main(string[] args)
         {
-            var elCount = new CountingElements();
-            var x = elCount.CountElements(new int[]{1,2,3});
+            var S = "ab#c";
+            var T = "ad#c";
+            
+            var bckStrComparer = new BackspaceStringComparer();
+            var x = bckStrComparer.BackspaceCompare(S, T);
+
             Console.WriteLine($" Answer: {x}");
         }
     }
