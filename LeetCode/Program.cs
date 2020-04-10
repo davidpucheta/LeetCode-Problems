@@ -8,13 +8,18 @@ namespace LeetCode
     {
         static void Main(string[] args)
         {
-            var S = "ab#c";
-            var T = "ad#c";
+            MinStack minStack = new MinStack();
+            minStack.Push(-2);
+            minStack.Push(0);
+            minStack.Push(-3);
+            var x = minStack.GetMin();  
+            minStack.Pop();
+            var y = minStack.Top();      
+            var z = minStack.GetMin();   
             
-            var bckStrComparer = new BackspaceStringComparer();
-            var x = bckStrComparer.BackspaceCompare(S, T);
+             
 
-            Console.WriteLine($" Answer: {x}");
+            Console.WriteLine($" Answer: {x}, {y}, {z}");
         }
     }
 }
